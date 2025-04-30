@@ -18,7 +18,7 @@ struct Movie
 	
 };
 
-Movie initMovie(char* name, const unsigned& duration, const Genres& genre, const double rating)
+Movie initMovie(char* name, const unsigned& duration, const Genres& genre, double rating)
 {
 	return { rating, name, duration, genre };
 }
@@ -67,7 +67,7 @@ void printCollection(const Movie* arr, const unsigned size)
 }
 
 
-Movie getHighestRating(const Movie* arr, const unsigned size, bool(*comp)(const Movie& , const Movie& ))
+Movie getHighestRating(const Movie* arr, unsigned size, bool(*comp)(const Movie& , const Movie& ))
 {
 	if (!arr)
 	{
