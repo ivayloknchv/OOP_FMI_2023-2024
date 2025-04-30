@@ -18,7 +18,7 @@ struct Event {
 	int duration;
 };
 
-void printDay(const DayOfWeek& day)
+void printDay(DayOfWeek day)
 {
 	switch (day)
 	{
@@ -58,7 +58,7 @@ void printEventsOn(DayOfWeek day, const Event* events, int size)
 	}
 }
 
-bool validate(int& begin, int& end)
+bool validate(int begin, int end)
 {
 	if (begin < end)
 	{
